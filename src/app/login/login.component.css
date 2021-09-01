@@ -1,7 +1,7 @@
 #imgLog{
 height: 500px;
 width: 500px;
-background-image: url(../../assets/imgLogin/Login-bro.svg);
+background-image: url(../../assets/imgLogineSenha/Login-bro.svg);
 background-position: center;
 background-repeat: no-repeat;
 }
@@ -31,7 +31,7 @@ padding-top: 30px;
 }
 
 .bordas{
- 
+
   border-style: none;
   outline: none;
   border-bottom-style: solid;
