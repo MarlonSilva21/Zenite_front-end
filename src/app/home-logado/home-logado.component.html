@@ -1,0 +1,97 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center shadow-lg mb-3 rounded">
+        <img src="https://avatars.githubusercontent.com/u/66184206?v=4" class="img-fluid rounded-circle m-3" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Zenite Company</h5>
+          <p class="card-text">Cursos concluídos</p>
+          <p class="card-text">0</p>
+          <p class="card-text">Zenicoins</p>
+          <p class="card-text">0</p>
+          <a href="#" class="btn btn-success">Lorem ipsum</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="row">
+        <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
+          <div class="form-group">
+            <select class="form-control my-1" name="pesquisarTema" id="pesquisarTema">
+              <option>Pesquisar publicações por tema</option>
+              <option value="">tema 1</option>
+              <option value="">tema 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
+          Postagens
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="row">
+        <div class="col-md-12 p-3">
+          <button class="btn btn-success btn-block " data-toggle="modal" data-target="#novaPostagem">Nova
+            Postagem</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nova Posgatem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+          </div>
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tema">Escolha um tema ou <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>: </label>
+            <select class="form-control" name="tema" id="tema">
+              <option value="">Temas</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -8,6 +8,7 @@ import {FooterComponent} from "./footer/footer.component";
 import {HomeComponent} from "./home/home.component";
 import {LoginComponent} from "./login/login.component";
 import {NavbarComponent} from "./navbar/navbar.component";
+import { HomeLogadoComponent } from './home-logado/home-logado.component';
 
 const routes: Routes = [
 
@@ -19,9 +20,9 @@ const routes: Routes = [
   {path:'cadastro-professor', component: CadastroProfessorComponent},
   {path:'cadastro-empresa', component: CadastroEmpresaComponent},
   {path:'esqueceu-senha', component: EsqueceuSenhaComponent},
-  {path:'footer', component: FooterComponent}
-
-];
+  {path:'footer', component: FooterComponent},
+  {path: 'homeLogado', component: HomeLogadoComponent}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
