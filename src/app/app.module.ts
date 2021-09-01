@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
@@ -19,7 +21,9 @@ import { CadastroProfessorComponent } from './cadastro-professor/cadastro-profes
     CadastroEmpresaComponent,
     HomeComponent,
     CadastroComponent,
-    CadastroProfessorComponent
+    CadastroProfessorComponent,
+    LoginComponent,
+    EsqueceuSenhaComponent
 
   ],
   imports: [

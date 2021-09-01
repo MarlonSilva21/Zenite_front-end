@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+
+#imgSenha{
+  height: 500px;
+  width: 500px;
+  background-image: url(../../assets/imgLogineSenha/passwordrafiki.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .boxEmail{
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 8px;
+    padding: 35px;
+  
+    
+  }
+
+  .bordas{
+ 
+    border-style: none;
+    outline: none;
+    border-bottom-style: solid;
+  }
+
+  textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0
+}
+.ajuste{
+  text-align: left;
+}

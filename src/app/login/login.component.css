@@ -1,0 +1,45 @@
+#imgLog{
+height: 500px;
+width: 500px;
+background-image: url(../../assets/imgLogin/Login-bro.svg);
+background-position: center;
+background-repeat: no-repeat;
+}
+
+
+.boxLG{
+width: 500px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
+border-radius: 8px;
+padding-right: 60px;
+padding-left: 50px;
+padding-top: 30px;
+
+}
+
+.ajuste{
+  text-align: left;
+}
+
+.botaoT{
+  width: 100%;
+}
+
+.x{
+  margin: 20px 50px 50px 50px;
+}
+
+.bordas{
+ 
+  border-style: none;
+  outline: none;
+  border-bottom-style: solid;
+}
+
+.corLink{
+  color: #52b788;
+}
+
+.cor2{ color: #52b788;
+}
