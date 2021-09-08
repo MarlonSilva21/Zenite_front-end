@@ -1,0 +1,34 @@
+.fs-50{
+    font-size: 45pt;
+}
+
+.icon{
+    color: #4caf50;
+    font-size: 30pt;
+}
+
+.icon-size{
+    color: #4caf50;
+    font-size: 90pt;
+}
+
+ul{
+    list-style: none;
+}
+
+.texto{
+    width: 300px;
+}
+
+.titulo{
+    color:#4caf50;
+}
+
+.cont-color{
+    background-color:#4caf50;
+}
+
+.card-tm{
+    width: 250px;
+    height: 500px;
+}
