@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProfessorComponent } from './cadastro-professor/cadastro-professor.component';
 import { FooterComponent } from './footer/footer.component';
+import { TelaVideosComponent } from './tela-videos/tela-videos.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     EsqueceuSenhaComponent,
     FooterComponent,
-    HomeLogadoComponent
+    HomeLogadoComponent,
+    TelaVideosComponent
   ],
   imports: [
     BrowserModule,
