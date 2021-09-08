@@ -1,5 +1,8 @@
 .h-100vh{
-    height: 100vh;
+  height: 100vh;
+  background-image: url("https://imgur.com/ldDqG3L.png") ;
+  background-repeat: no-repeat;
+  background-size: cover ;
 }
 
 .ml-100{
@@ -16,7 +19,7 @@
 
 .b-input-bottom{
     border: none;
-    
+
 }
 
 textarea:focus, input:focus, select:focus {
@@ -49,7 +52,7 @@ textarea:focus, input:focus, select:focus {
 .square-center{
     /* height: 15rem;  */
     /* width: 200px; */
-    background-color: #ffffff; 
+    background-color: #ffffff;
     border: 1px solid black;
     z-index: 100;
 }
@@ -62,8 +65,8 @@ textarea:focus, input:focus, select:focus {
 .square-center-2{
     height: 17rem;
     background-color: #424242;
-    
+
     position: absolute;
-    
+
 }
 

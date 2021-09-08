@@ -15,12 +15,12 @@ export class AuthService {
 
 
   entrar(estudanteLogin: UsuarioEstudanteLogin): Observable<UsuarioEstudanteLogin>{
-    return this.http.post<UsuarioEstudanteLogin>('https://zenite.herokuapp.com/usuario/logar', estudanteLogin)
+    return this.http.post<UsuarioEstudanteLogin>('https://zenitesocial.herokuapp.com/usuario/logar', estudanteLogin)
 
   }
 
   cadastrar(usuarioEstudante: UsuarioEstudante): Observable<UsuarioEstudante>{
-    return this.http.post<UsuarioEstudante>('https://zenite.herokuapp.com/usuario/cadastrar', usuarioEstudante)
+    return this.http.post<UsuarioEstudante>('https://zenitesocial.herokuapp.com/usuario/cadastrar', usuarioEstudante)
   }
 
 }

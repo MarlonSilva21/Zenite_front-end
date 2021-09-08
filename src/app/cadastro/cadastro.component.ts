@@ -24,7 +24,6 @@ export class CadastroComponent implements OnInit {
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value
-
   }
 
   cadastrar() {
@@ -32,14 +31,16 @@ export class CadastroComponent implements OnInit {
     if(this.usuarioEstudante.senha != this.confirmarSenha){
       alert('as senhas estão incorretas')
     }
+    else if(this.usuarioEstudante.senha.length < 6){
+      alert('Dígite uma senha com no mínimo 6 caracteres!')
+    }
     else{
       this.authService.cadastrar(this.usuarioEstudante).subscribe((resp: UsuarioEstudante) => {
         this.usuarioEstudante = resp
 
         this.router.navigate(['/login'])
-        alert('Usuário cadastrado com sucesso!')
+        alert('Usuário cadastrado com sucesso, Conecte-se')
       } )
     }
   }
-
 }
