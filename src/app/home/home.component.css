@@ -32,3 +32,91 @@ ul{
     width: 250px;
     height: 500px;
 }
+
+.btn-color{
+    background-color:#4caf50;
+}
+  
+/*FLIP CARD*/
+  .face {
+    width: 400px;
+    height: 500px;
+    perspective: 400px;
+  }
+
+  .faceEquipe{
+    width: 200px;
+    height: 250px;
+    perspective: 200px;
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 700ms;
+  }
+
+  .frontLhama, .backLhama {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 700ms;
+  }
+  
+  .front {
+    background: #4caf50;
+    z-index: 1;
+  }
+
+  .frontLhama{
+    background: #ffffff;
+    z-index: 1;
+  }
+  
+  .back {
+    background: #92E3A9;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+  }
+
+  .backLhama{
+    background: #4caf50;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+  }
+  
+  .face:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+  }
+  
+  .face:hover .back {
+    transform: rotateY(0);
+    z-index: 1;
+  }
+
+  .face:hover .frontLhama {
+    transform: rotateY(180deg);
+    z-index: 0;
+  }
+  
+  .face:hover .backLhama {
+    transform: rotateY(0);
+    z-index: 1;
+  }
+
+  .faceEquipe:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+  }
+  
+  .faceEquipe:hover .back {
+    transform: rotateY(0);
+    z-index: 1;
+  }
+/*FLIP CARD*/
