@@ -36,3 +36,16 @@
 .ajuste{
   text-align: left;
 }
+
+.linha{
+  border-bottom: 1px solid rgb(44, 40, 40);
+}
+
+.color-grey{
+  color: #9e9e9e;
+}
+
+.teste{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
