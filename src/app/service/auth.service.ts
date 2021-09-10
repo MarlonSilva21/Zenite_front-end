@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import {UsuarioEstudanteLogin} from "../model/UsuarioEstudanteLogin";
 import {Observable} from "rxjs";
 import {UsuarioEstudante} from "../model/UsuarioEstudante";
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -15,12 +16,26 @@ export class AuthService {
 
 
   entrar(estudanteLogin: UsuarioEstudanteLogin): Observable<UsuarioEstudanteLogin>{
-    return this.http.post<UsuarioEstudanteLogin>('https://zenitesocial.herokuapp.com/usuario/logar', estudanteLogin)
+    return this.http.post<UsuarioEstudanteLogin>('https://redezenite.herokuapp.com/usuario/logar', estudanteLogin)
 
   }
 
   cadastrar(usuarioEstudante: UsuarioEstudante): Observable<UsuarioEstudante>{
-    return this.http.post<UsuarioEstudante>('https://zenitesocial.herokuapp.com/usuario/cadastrar', usuarioEstudante)
+    return this.http.post<UsuarioEstudante>('https://redezenite.herokuapp.com/usuario/cadastrar', usuarioEstudante)
+  }
+
+  getByIdUser(id: number): Observable<UsuarioEstudante> {
+    return this.http.get<UsuarioEstudante>(`https://redezenite.herokuapp.com/usuario/${id}`)
+  }
+
+  logado() {
+    let ok: boolean  = false
+
+    if(environment.token != ''){
+      ok = true
+    }
+
+    return ok
   }
 
 }

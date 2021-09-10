@@ -3,9 +3,9 @@
   <div class="row">
     <div class="col-md-3">
       <div class="card text-center shadow-lg mb-3 rounded">
-        <img src="https://avatars.githubusercontent.com/u/66184206?v=4" class="img-fluid rounded-circle m-3" alt="...">
+        <img src="{{foto}}" class="img-fluid rounded-circle m-3" alt="foto do user">
         <div class="card-body">
-          <h5 class="card-title">Zenite Company</h5>
+          <h5 class="card-title">{{nome}}</h5>
           <p class="card-text">Cursos concluídos</p>
           <p class="card-text">0</p>
           <p class="card-text">Zenicoins</p>
@@ -19,34 +19,34 @@
         <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
           <div class="form-group">
             <select class="form-control my-1" name="pesquisarTema" id="pesquisarTema">
-              <option>Pesquisar publicações por tema</option>
-              <option value="">tema 1</option>
-              <option value="">tema 2</option>
+              <option *ngFor="let item of listaCategoria" value="{{item.id}}">
+                {{item.categoria}}
+              </option>
+
             </select>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
+        <div class="col-md-12 shadow-lg mb-3 p-3 rounded" *ngFor='let item of listaPostagem | orderBy : key : reverse'>
           <div class="row d-flex align-items-center">
             <div class="col-12">
               <div class="row d-flex align-items-center">
                 <div class="col-2">
-                  <img src="https://avatars.githubusercontent.com/u/66184206?v=4" class="img-fluid rounded-circle m-3"
-                    alt="...">
+                  <img src="{{item.usuario.foto}}" class="img-fluid rounded-circle m-3"
+                       alt="...">
                 </div>
                 <div class="col-10">
-                  <div class="">André Marques</div>
-                  <small>1 hora</small>
+                  <p class="m-0">{{item.usuario.nome}}</p>
+                  <small>
+                    postado em: {{item.data | date : 'dd/MM/yyy'}} às {{item.data | date : 'HH'}} hrs
+                  </small>
                 </div>
               </div>
-              <h3 class="text-center mb-3">Desenvolvimento em Java</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vel laborum totam sapiente illo
-                alias
-                similique accusantium! A ea inventore voluptates rem id libero voluptatibus deserunt, vero mollitia illo
-                nam!
+              <h3 class="text-center mb-3">{{item.titulo}}</h3>
+              <p>{{item.texto}}
               </p>
-              <img class="img-fluid" src="https://i.imgur.com/qpOpfoz.jpeg" alt="">
+              <img class="img-fluid" src="{{item.foto}}" alt="foto da postagem">
               <hr>
               <div class="d-flex justify-content-around align-items-center">
                 <div>
@@ -67,39 +67,40 @@
       <div class="row">
         <div class="col-md-12 p-3">
           <button class="btn btn-success btn-block " data-toggle="modal" data-target="#novaPostagem">Nova
-            Postagem</button>
+            Postagem
+          </button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+<!--  <div class="modal" tabindex="-1">-->
+<!--    <div class="modal-dialog">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <h5 class="modal-title">Modal title</h5>-->
+<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+<!--          <p>Modal body text goes here.</p>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--          <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <!-- Modal -->
   <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-    aria-hidden="true">
+       aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nova Posgatem</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -107,28 +108,30 @@
         <div class="modal-body">
           <div class="form-group">
             <label for="titulo">Título</label>
-            <input type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+            <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
           </div>
           <div class="form-group">
             <label for="texto">Texto</label>
-            <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+            <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
           </div>
           <div class="form-group">
             <label for="imagem">imagem</label>
-            <input type="text" class="form-control" id="imagem" placeholder="Insira o link da imagem">
+            <input [(ngModel)]="postagem.foto" type="text" class="form-control" id="imagem" placeholder="Insira o link da imagem">
           </div>
           <div class="form-group">
-            <label for="tema">Escolha um tema ou <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:
-            </label>
-            <select class="form-control" name="tema" id="tema">
-              <option value="">Temas</option>
+            <label for="tema">Escolha um tema </label>
+            <select class="form-control" name="tema" id="tema" [(ngModel)]='idCategoria' (change)="findByIdCategoria()">
+              <option *ngFor="let item of listaCategoria" value="{{item.id}}">
+                {{item.categoria}}
+              </option>
             </select>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Publicar</button>
+          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
         </div>
       </div>
     </div>
   </div>
+</div>

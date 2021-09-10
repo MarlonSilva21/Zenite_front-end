@@ -15,6 +15,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProfessorComponent } from './cadastro-professor/cadastro-professor.component';
 import { FooterComponent } from './footer/footer.component';
 import { CursosComponent } from './cursos/cursos.component';
+import {OrderModule} from "ngx-order-pipe";
+import {ModalModule} from "ngx-bootstrap/modal";
 
 
 
@@ -31,13 +33,15 @@ import { CursosComponent } from './cursos/cursos.component';
     EsqueceuSenhaComponent,
     FooterComponent,
     HomeLogadoComponent,
-    CursosComponent
+    CursosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

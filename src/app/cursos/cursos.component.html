@@ -4,10 +4,14 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-10 shadow-lg mb-3 p-3 rounded bg-success position-fixed w-100" style="z-index: 100;">
       <div class="form-group pt-2">
-        <select class="form-control bg-success text-light" name="pesquisarTema" id="pesquisarTema">
-          <option>Busque por uma categoria específica</option>
-          <option value="">categoria 1</option>
-          <option value="">categoria 2</option>
+        <select class="form-control bg-success text-light" name="pesquisarTema" id="pesquisarTema" >
+
+          <option>Busque por uma categoria de cursos específica!</option>
+          <option *ngFor="let item of listaCategoria" value="{{item.id}}">
+
+            {{item.categoria}}
+          </option>
+
         </select>
       </div>
     </div>
@@ -170,7 +174,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      
+
       <div class="row d-flex align-items-center">
         <div class="col-md-3">
           <img class="img-fluid" src="https://i.imgur.com/NB3QI0R.png" alt="">

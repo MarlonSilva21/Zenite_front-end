@@ -11,7 +11,7 @@ import {environment} from "../../environments/environment.prod";
 })
 export class LoginComponent implements OnInit {
 
-  estudanteLogin: UsuarioEstudanteLogin = new UsuarioEstudanteLogin()
+  estudanteLogin: UsuarioEstudanteLogin = new UsuarioEstudanteLogin
 
   constructor(
     private auth: AuthService,
@@ -26,10 +26,10 @@ export class LoginComponent implements OnInit {
     this.auth.entrar(this.estudanteLogin).subscribe((resp: UsuarioEstudanteLogin) => {
       this.estudanteLogin = resp
 
+      environment.token = this.estudanteLogin.token
       environment.nome = this.estudanteLogin.nome
       environment.foto = this.estudanteLogin.foto
       environment.id = this.estudanteLogin.id
-      environment.token = this.estudanteLogin.token
 
       this.router.navigate(['/homeLogado'])
     }, erro => {
