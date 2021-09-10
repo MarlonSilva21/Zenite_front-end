@@ -73,6 +73,18 @@ export class HomeLogadoComponent implements OnInit {
     })
   }
 
+  findByTituloPostagem(){
+
+    if (this.postagemTema == ''){
+      this.getAllPostagens()
+    }
+    else{
+      this.postagemService.getByTituloPostagem(this.postagemTema).subscribe((resp: Postagem[]) => {
+        this.listaPostagem = resp
+      })
+    }
+  }
+
   findByPostagemTema(){
     if(this.postagemTema == ''){
       this.getAllCategoria()

@@ -18,12 +18,9 @@
       <div class="row">
         <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
           <div class="form-group">
-            <select class="form-control my-1" name="pesquisarTema" id="pesquisarTema">
-              <option *ngFor="let item of listaCategoria" value="{{item.id}}">
-                {{item.categoria}}
-              </option>
-
-            </select>
+            <input type="text" class="form-control" id="titulo1"
+                   placeholder="Digite um título de postagem para pesquisar" [(ngModel)]="postagemTema"
+                   (keyup)="findByTituloPostagem()">
           </div>
         </div>
       </div>
