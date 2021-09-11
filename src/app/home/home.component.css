@@ -12,7 +12,7 @@
 
 .icon-size{
     color: #4caf50;
-    font-size: 80pt;
+    font-size: 70pt;
 }
 
 ul{
@@ -47,6 +47,14 @@ ul{
 .btn-carousel{
   color:#92E3A9;
 }
+
+.card-icon{
+  font-size: 30pt;
+}
+
+h2{
+  font-family: 'Ubuntu', sans-serif;
+}
   
 /*FLIP CARD*/
   .face {
@@ -80,7 +88,7 @@ ul{
   }
   
   .front {
-    background: #4caf50;
+    background: #B8EBA2;
     z-index: 1;
   }
 
@@ -96,7 +104,7 @@ ul{
   }
 
   .backLhama{
-    background: #4caf50;
+    background: #B8EBA2;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
   }
