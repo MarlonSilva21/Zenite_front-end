@@ -18,6 +18,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { NavbarlogadoComponent } from './navbarlogado/navbarlogado.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { TelaVideosComponent } from './tela-videos/tela-videos.component';
+import {OrderModule} from "ngx-order-pipe";
+import {ModalModule} from "ngx-bootstrap/modal";
 
 
 
@@ -43,7 +45,9 @@ import { TelaVideosComponent } from './tela-videos/tela-videos.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
