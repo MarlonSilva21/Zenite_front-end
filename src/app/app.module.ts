@@ -15,7 +15,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroProfessorComponent } from './cadastro-professor/cadastro-professor.component';
 import { FooterComponent } from './footer/footer.component';
 import { CursosComponent } from './cursos/cursos.component';
-
+import { NavbarlogadoComponent } from './navbarlogado/navbarlogado.component';
 
 
 
@@ -31,7 +31,9 @@ import { CursosComponent } from './cursos/cursos.component';
     EsqueceuSenhaComponent,
     FooterComponent,
     HomeLogadoComponent,
-    CursosComponent
+    CursosComponent,
+    NavbarlogadoComponent
+
   ],
   imports: [
     BrowserModule,
