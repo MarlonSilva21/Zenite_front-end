@@ -20,6 +20,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { TelaVideosComponent } from './tela-videos/tela-videos.component';
 import {OrderModule} from "ngx-order-pipe";
 import {ModalModule} from "ngx-bootstrap/modal";
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 
@@ -38,7 +40,9 @@ import {ModalModule} from "ngx-bootstrap/modal";
     CursosComponent,
     NavbarlogadoComponent,
     UsuarioComponent,
-    TelaVideosComponent
+    TelaVideosComponent,
+    PostagemEditComponent,
+    PostagemDeleteComponent
 
   ],
   imports: [

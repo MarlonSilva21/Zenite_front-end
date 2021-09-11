@@ -13,6 +13,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import {NavbarlogadoComponent} from "./navbarlogado/navbarlogado.component";
 import { UsuarioComponent } from './usuario/usuario.component';
 import { TelaVideosComponent } from './tela-videos/tela-videos.component';
+import {PostagemEditComponent} from "./edit/postagem-edit/postagem-edit.component";
+import {PostagemDeleteComponent} from "./delete/postagem-delete/postagem-delete.component";
 
 
 const routes: Routes = [
@@ -30,7 +32,10 @@ const routes: Routes = [
   {path: 'cursos', component: CursosComponent},
   {path: 'navbarlogado', component : NavbarlogadoComponent},
   {path: 'perfil-usuario', component: UsuarioComponent},
-  {path: 'telaDeVideos', component: TelaVideosComponent}
+  {path: 'telaDeVideos', component: TelaVideosComponent},
+
+  {path: 'postagem-edit/:id', component: PostagemEditComponent},
+  {path: 'postagem-delete/:id', component: PostagemDeleteComponent}
 
 ]
 
