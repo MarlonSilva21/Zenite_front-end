@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 .fs-50{
     font-size: 45pt;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .icon{
@@ -9,7 +12,7 @@
 
 .icon-size{
     color: #4caf50;
-    font-size: 90pt;
+    font-size: 80pt;
 }
 
 ul{
@@ -18,14 +21,18 @@ ul{
 
 .texto{
     width: 300px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .titulo{
     color:#4caf50;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .cont-color{
     background-color:#4caf50;
+    width: 100%;
+    height: 500px;
 }
 
 .card-tm{
@@ -35,6 +42,10 @@ ul{
 
 .btn-color{
     background-color:#4caf50;
+}
+
+.btn-carousel{
+  color:#92E3A9;
 }
   
 /*FLIP CARD*/
