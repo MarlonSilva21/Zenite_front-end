@@ -11,7 +11,7 @@ import {NavbarComponent} from "./navbar/navbar.component";
 import { HomeLogadoComponent } from './home-logado/home-logado.component';
 import { CursosComponent } from './cursos/cursos.component';
 import {NavbarlogadoComponent} from "./navbarlogado/navbarlogado.component";
-
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 const routes: Routes = [
@@ -27,7 +27,8 @@ const routes: Routes = [
   {path:'footer', component: FooterComponent},
   {path: 'homeLogado', component: HomeLogadoComponent},
   {path: 'cursos', component: CursosComponent},
-  {path: 'navbarlogado', component : NavbarlogadoComponent}
+  {path: 'navbarlogado', component : NavbarlogadoComponent},
+  {path: 'usuario', component: UsuarioComponent}
 
 ]
 

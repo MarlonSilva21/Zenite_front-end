@@ -16,6 +16,7 @@ import { CadastroProfessorComponent } from './cadastro-professor/cadastro-profes
 import { FooterComponent } from './footer/footer.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { NavbarlogadoComponent } from './navbarlogado/navbarlogado.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 
@@ -32,7 +33,8 @@ import { NavbarlogadoComponent } from './navbarlogado/navbarlogado.component';
     FooterComponent,
     HomeLogadoComponent,
     CursosComponent,
-    NavbarlogadoComponent
+    NavbarlogadoComponent,
+    UsuarioComponent
 
   ],
   imports: [
