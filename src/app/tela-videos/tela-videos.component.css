@@ -1,0 +1,19 @@
+.tam
+{ bottom: 5px;
+  width: 25%;}
+
+  table{
+    border-width: 100%;
+  }
+
+  .bg-linha1{
+    background-color: #ffffff;
+  }
+
+  .bg-linhas0{
+    background-color: #d4ffcb;
+  }
+
+  .letra{
+    font-size: 25px;
+  }

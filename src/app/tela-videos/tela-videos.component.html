@@ -1,0 +1,157 @@
+<div class="container-fluid mt-5">
+
+    <!--Geral-->
+<div class="row">
+
+    <!--Coluna do video-->
+    <div class="col-md-8 mt-5">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="embed-responsive embed-responsive-16by9 mt-4 ml-3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                  </div>
+            </div>
+        </div>
+        
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8 align-itens-center">
+                <h2 class="text-center mt-5 mb-2">
+                    Perguntas e respostas
+                </h2>
+                    <div class="form-group d-flex justify-content-center ml-4 mt-3">
+                        <label for="perguntas"></label>
+                        <input class="form-control" type="text" name="titulo" id="tituloPergunta" placeholder="Perguntas e respostas">
+                        <button class="btn btn-success ml-2 w-25" data-toggle="modal" data-target="#novaPergunta" type="button">Nova Pergunta<i class="" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="card text-center ml-5 mr-5">
+                <!-- vai ter o NGfor para ir criando conforme cada pergunta -->
+            <div class="card-body">
+              <h5 class="card-title">Título da Pergunta</h5>
+              <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+              
+            </div>
+            <div class="card-footer text-muted">
+                <p class="card-text"><small class="text-muted">item.data | date: 'dd/MM/yyyy' às item.data | date:
+                'HH:mm' </small></p>
+            </div>
+          </div>
+
+
+
+</div>
+    <div class="col-md-4 d-flex" >
+        <table class="table">
+            <thead class="bg-linha1 letra text-center">
+              <tr>
+                <th class="" scope="col" >Aulas do curso</th>
+                
+              </tr>
+            </thead>
+
+            <tbody class="bg-linhas0 ">
+              <tr >
+                <td class="pl-5" >1 - Operadores lógicos</td>
+               
+              </tr>
+              <tr>
+                <td class="pl-5" >2 - Condicionais</td>
+               
+              </tr>
+              <tr>
+                <td class="pl-5" >3 - Laços de repetição</td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5" >4 - Laços de repetição </td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5" >5 - Vetores</td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5" >6 - Matrizes</td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5" >7 - POO</td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5"  >8 - Classes</td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5"  >9 - Herança</td>
+             
+              </tr>
+
+              <tr>
+                <td class="pl-5"  scope="row">10 - Polimorfismo</td>
+             
+              </tr>
+            </tbody>
+          </table>
+          
+          
+    </div>
+</div>
+
+
+
+</div>
+
+
+<!-- Botão para acionar modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#novaPergunta"> -->
+<!-- Abrir modal de demonstração -->
+<!-- </button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="novaPergunta" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Pergunta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="Titulo"> Título</label>
+          <input  type="text" class="form-control" id="titulo" placeholder="Digite titulo">
+        </div>
+
+        <div class="form-group">
+          <label for="texto"> Texto</label>
+          <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="Titulo"> Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um
+              novo</a></label>
+          <select name="" id="" class="form-control"  >
+            <option  value="">Preencher corretamente</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success"  data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>

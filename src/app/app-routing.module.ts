@@ -12,6 +12,7 @@ import { HomeLogadoComponent } from './home-logado/home-logado.component';
 import { CursosComponent } from './cursos/cursos.component';
 import {NavbarlogadoComponent} from "./navbarlogado/navbarlogado.component";
 import { UsuarioComponent } from './usuario/usuario.component';
+import { TelaVideosComponent } from './tela-videos/tela-videos.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'homeLogado', component: HomeLogadoComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'navbarlogado', component : NavbarlogadoComponent},
-  {path: 'usuario', component: UsuarioComponent}
+  {path: 'usuario', component: UsuarioComponent},
+  {path: 'telaDeVideos', component: TelaVideosComponent}
 
 ]
 

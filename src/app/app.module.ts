@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { NavbarlogadoComponent } from './navbarlogado/navbarlogado.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { TelaVideosComponent } from './tela-videos/tela-videos.component';
 
 
 
@@ -34,7 +35,8 @@ import { UsuarioComponent } from './usuario/usuario.component';
     HomeLogadoComponent,
     CursosComponent,
     NavbarlogadoComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    TelaVideosComponent
 
   ],
   imports: [
