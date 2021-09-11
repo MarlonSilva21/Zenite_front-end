@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {UsuarioEstudanteLogin} from "../model/UsuarioEstudanteLogin";
 import {Observable} from "rxjs";
 import {UsuarioEstudante} from "../model/UsuarioEstudante";
@@ -14,6 +14,16 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
 
   entrar(estudanteLogin: UsuarioEstudanteLogin): Observable<UsuarioEstudanteLogin>{
     return this.http.post<UsuarioEstudanteLogin>('https://redezenite.herokuapp.com/usuario/logar', estudanteLogin)
@@ -25,7 +35,7 @@ export class AuthService {
   }
 
   getByIdUser(id: number): Observable<UsuarioEstudante> {
-    return this.http.get<UsuarioEstudante>(`https://redezenite.herokuapp.com/usuario/${id}`)
+    return this.http.get<UsuarioEstudante>(`https://redezenite.herokuapp.com/usuario/${id}`, this.token)
   }
 
   logado() {
@@ -33,6 +43,16 @@ export class AuthService {
 
     if(environment.token != ''){
       ok = true
+    }
+
+    return ok
+  }
+
+  naoLogado(){
+    let ok: boolean  = true
+
+    if(environment.token != ''){
+      ok = false
     }
 
     return ok

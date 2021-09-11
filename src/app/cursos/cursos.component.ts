@@ -18,6 +18,7 @@ export class CursosComponent implements OnInit {
   idCurso: number
   listaCategoria: Categoria[]
   listaCursos: Curso[]
+  cursoTema: string
 
 
   constructor(
@@ -32,9 +33,10 @@ export class CursosComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
+    this.cursoService.refreshToken()
     this.getAllCategoria()
     this.getAllCursos()
-    this.cursoService.refreshToken()
+
   }
 
 
@@ -48,6 +50,18 @@ export class CursosComponent implements OnInit {
     this.cursoService.getAllCursos().subscribe((resp: Curso[]) => {
       this.listaCursos = resp
     })
+  }
+
+  findByNomeCurso(){
+
+    if (this.cursoTema == ''){
+      this.getAllCursos()
+    }
+    else{
+      this.cursoService.getByTituloCursos(this.cursoTema).subscribe((resp: Curso[]) => {
+        this.listaCursos = resp
+      })
+    }
   }
 
   findByIdCursos() {

@@ -44,6 +44,8 @@ export class HomeLogadoComponent implements OnInit {
 
   ngOnInit(){
 
+    scroll(0,0)
+
     if(environment.token == '') {
       this.router.navigate(['/home'])
     }
@@ -52,6 +54,7 @@ export class HomeLogadoComponent implements OnInit {
     this.getAllPostagens()
     this.temaService.refreshToken()
     this.postagemService.refreshToken()
+    this.auth.refreshToken()
   }
 
 

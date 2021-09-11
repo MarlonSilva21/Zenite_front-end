@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'homeLogado', component: HomeLogadoComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'navbarlogado', component : NavbarlogadoComponent},
-  {path: 'usuario', component: UsuarioComponent},
+  {path: 'perfil-usuario', component: UsuarioComponent},
   {path: 'telaDeVideos', component: TelaVideosComponent}
 
 ]

@@ -1,9 +1,10 @@
-<!--<app-navbar></app-navbar>-->
+<app-navbar *ngIf='auth.naoLogado()'></app-navbar>
+<app-navbarlogado *ngIf="auth.logado()"></app-navbarlogado>
 
-<!--<router-outlet></router-outlet>-->
+<router-outlet></router-outlet>
 
-<!--<app-footer></app-footer>-->
-<app-cursos></app-cursos>
+<app-footer></app-footer>
+
 
 
 
