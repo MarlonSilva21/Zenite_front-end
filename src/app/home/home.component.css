@@ -1,18 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 .fs-50{
-    font-size: 45pt;
+    font-size: 42pt;
     font-family: 'Ubuntu', sans-serif;
+    border-right: 2px solid;
+}
+
+@keyframes blinkCursor {
+  from{
+    border-right-color:
+
+  }
+  to{
+    border-right-color: transparent;
+  }
+
 }
 
 .icon{
-    color: #4caf50;
-    font-size: 30pt;
+    color: #F79B1F;
+    font-size: 15pt;
 }
 
 .icon-size{
     color: #4caf50;
-    font-size: 70pt;
+    font-size: 50pt;
 }
 
 ul{
@@ -25,8 +37,9 @@ ul{
 }
 
 .titulo{
-    color:#4caf50;
+    color:#F79B1F;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 550;
 }
 
 .cont-color{

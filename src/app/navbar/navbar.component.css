@@ -12,3 +12,11 @@
 ul li a.color{
     color:white
 }
+
+.btn-success{
+    background-color: #F79B1F;
+}
+
+.item{
+    margin-right: 15px;
+}
