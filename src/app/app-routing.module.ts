@@ -9,6 +9,8 @@ import {HomeComponent} from "./home/home.component";
 import {LoginComponent} from "./login/login.component";
 import {NavbarComponent} from "./navbar/navbar.component";
 import { HomeLogadoComponent } from './home-logado/home-logado.component';
+import {NavbarlogadoComponent} from "./navbarlogado/navbarlogado.component";
+
 
 const routes: Routes = [
 
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path:'cadastro-empresa', component: CadastroEmpresaComponent},
   {path:'esqueceu-senha', component: EsqueceuSenhaComponent},
   {path:'footer', component: FooterComponent},
-  {path: 'homeLogado', component: HomeLogadoComponent}
+  {path: 'homeLogado', component: HomeLogadoComponent},
+  {path: 'navbarlogado', component : NavbarlogadoComponent}
+
 ]
 
 @NgModule({
