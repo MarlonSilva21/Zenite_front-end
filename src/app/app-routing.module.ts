@@ -10,6 +10,7 @@ import {LoginComponent} from "./login/login.component";
 import {NavbarComponent} from "./navbar/navbar.component";
 import { HomeLogadoComponent } from './home-logado/home-logado.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 const routes: Routes = [
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'esqueceu-senha', component: EsqueceuSenhaComponent},
   {path:'footer', component: FooterComponent},
   {path: 'homeLogado', component: HomeLogadoComponent},
-  {path: 'cursos', component: CursosComponent}
+  {path: 'cursos', component: CursosComponent},
+  {path: 'usuario', component: UsuarioComponent}
 ]
 
 @NgModule({
