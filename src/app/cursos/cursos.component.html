@@ -175,45 +175,49 @@
   <div class="row">
     <div class="col-md-12">
 
-      <div class="row d-flex align-items-center">
+      <div class="row d-flex align-items-center" *ngFor="let item of listaCursos">
         <div class="col-md-3">
-          <img class="img-fluid" src="https://i.imgur.com/NB3QI0R.png" alt="">
+          <img class="img-fluid" src="{{item.foto}}" alt="">
         </div>
         <div class="col-md-9">
-          <h2>Desenvolvimento em Java</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vel laborum totam sapiente illo alias
-            similique accusantium! A ea inventore voluptates rem id libero voluptatibus deserunt, vero mollitia illo
-            nam!</p>
-          <p>Autor: </p>
+          <h2>{{item.titulo}}</h2>
+          <p>
+
+            {{item.descricaoCurso}}
+
+          </p>
+          <p>Autor: {{item.professor}} </p>
           <p>Duração: </p>
         </div>
       </div>
-      <div class="row d-flex align-items-center">
-        <div class="col-md-3">
-          <img class="img-fluid" src="https://i.imgur.com/NB3QI0R.png" alt="">
-        </div>
-        <div class="col-md-9">
-          <h2>Desenvolvimento em Java</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vel laborum totam sapiente illo alias
-            similique accusantium! A ea inventore voluptates rem id libero voluptatibus deserunt, vero mollitia illo
-            nam!</p>
-          <p>Autor: </p>
-          <p>Duração: </p>
-        </div>
-      </div>
-      <div class="row d-flex align-items-center">
-        <div class="col-md-3">
-          <img class="img-fluid" src="https://i.imgur.com/NB3QI0R.png" alt="">
-        </div>
-        <div class="col-md-9">
-          <h2>Desenvolvimento em Java</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vel laborum totam sapiente illo alias
-            similique accusantium! A ea inventore voluptates rem id libero voluptatibus deserunt, vero mollitia illo
-            nam!</p>
-          <p>Autor: </p>
-          <p>Duração: </p>
-        </div>
-      </div>
+
+
+<!--      <div class="row d-flex align-items-center">-->
+<!--        <div class="col-md-3">-->
+<!--          <img class="img-fluid" src="https://i.imgur.com/NB3QI0R.png" alt="">-->
+<!--        </div>-->
+<!--        <div class="col-md-9">-->
+<!--          <h2>Desenvolvimento em Java</h2>-->
+<!--          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vel laborum totam sapiente illo alias-->
+<!--            similique accusantium! A ea inventore voluptates rem id libero voluptatibus deserunt, vero mollitia illo-->
+<!--            nam!</p>-->
+<!--          <p>Autor: </p>-->
+<!--          <p>Duração: </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="row d-flex align-items-center">-->
+<!--        <div class="col-md-3">-->
+<!--          <img class="img-fluid" src="https://i.imgur.com/NB3QI0R.png" alt="">-->
+<!--        </div>-->
+<!--        <div class="col-md-9">-->
+<!--          <h2>Desenvolvimento em Java</h2>-->
+<!--          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vel laborum totam sapiente illo alias-->
+<!--            similique accusantium! A ea inventore voluptates rem id libero voluptatibus deserunt, vero mollitia illo-->
+<!--            nam!</p>-->
+<!--          <p>Autor: </p>-->
+<!--          <p>Duração: </p>-->
+<!--        </div>-->
+<!--      </div>-->
 
     </div>
   </div>
