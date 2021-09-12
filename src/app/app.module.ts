@@ -22,6 +22,7 @@ import {OrderModule} from "ngx-order-pipe";
 import {ModalModule} from "ngx-bootstrap/modal";
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 
@@ -42,7 +43,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
     UsuarioComponent,
     TelaVideosComponent,
     PostagemEditComponent,
-    PostagemDeleteComponent
+    PostagemDeleteComponent,
+    UsuarioEditComponent
 
   ],
   imports: [
