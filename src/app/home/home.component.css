@@ -1,78 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+.icon{
+  color: #F79B1F;
+  font-size: 15pt;
+}
+
+.icon-size{
+  color: #4caf50;
+  font-size: 50pt;
+}
+
+ul{
+  list-style: none;
+}
+
+.texto{
+  width: 300px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.titulo{
+  color:#F79B1F;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 550;
+}
+
+.cont-color{
+  background-color:#4caf50;
+  width: 100%;
+  height: 500px;
+}
+
+.card-tm{
+  width: 250px;
+  height: 500px;
+}
+
+.btn-color{
+  background-color:#4caf50;
+}
+
+.btn-carousel{
+color:#92E3A9;
+}
+
+.card-icon{
+font-size: 30pt;
+}
+
+h2{
+font-family: 'Ubuntu', sans-serif;
+}
+
 .fs-50{
     font-size: 42pt;
     font-family: 'Ubuntu', sans-serif;
     border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+p{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*Estilo Máquina de Escrever*/
+.typing-animation{
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 1s normal both;
+}
+
+.typing-animation2{
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 3s normal both;
+}
+
+.typing-animation3{
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 5s normal both;
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to{
+    width: 9em;
+  }
 }
 
 @keyframes blinkCursor {
   from{
-    border-right-color:
-
+    border-right-color: transparent;
   }
   to{
     border-right-color: transparent;
   }
 
 }
-
-.icon{
-    color: #F79B1F;
-    font-size: 15pt;
-}
-
-.icon-size{
-    color: #4caf50;
-    font-size: 50pt;
-}
-
-ul{
-    list-style: none;
-}
-
-.texto{
-    width: 300px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.titulo{
-    color:#F79B1F;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 550;
-}
-
-.cont-color{
-    background-color:#4caf50;
-    width: 100%;
-    height: 500px;
-}
-
-.card-tm{
-    width: 250px;
-    height: 500px;
-}
-
-.btn-color{
-    background-color:#4caf50;
-}
-
-.btn-carousel{
-  color:#92E3A9;
-}
-
-.card-icon{
-  font-size: 30pt;
-}
-
-h2{
-  font-family: 'Ubuntu', sans-serif;
-}
+/*Estilo Máquina de Escrever*/
   
 /*FLIP CARD*/
   .face {
-    width: 400px;
-    height: 500px;
+    width: 350px;
+    height: 400px;
     perspective: 400px;
   }
 
@@ -86,7 +114,7 @@ h2{
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 0;
     border-radius: 10px;
     transition: 700ms;
   }
@@ -95,13 +123,13 @@ h2{
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 0;
     border-radius: 10px;
     transition: 700ms;
   }
   
   .front {
-    background: #B8EBA2;
+    background: #4caf50;
     z-index: 1;
   }
 
@@ -152,3 +180,16 @@ h2{
     z-index: 1;
   }
 /*FLIP CARD*/
+
+.nome{
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.funcao{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.fotoEquipe{
+  border-radius: 5%;
+}
