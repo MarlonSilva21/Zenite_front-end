@@ -193,3 +193,13 @@ p{
 .fotoEquipe{
   border-radius: 5%;
 }
+
+/*MODO NOTURNO*/
+
+
+.dark-mode:root{
+  --body-bg:
+  --body-color:
+  --link-color:
+  --link-color-hover:
+}
