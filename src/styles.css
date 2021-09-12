@@ -3,3 +3,14 @@
 html{
     scroll-behavior: smooth;
 }
+
+body{
+  background-color: #fff!important;
+}
+
+
+:root {
+  --color-text: #000;
+  --background-color: #fff;
+  --background-color2: #f2f2f2;
+}

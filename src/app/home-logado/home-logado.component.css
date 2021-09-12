@@ -1,0 +1,48 @@
+.postagem{
+  background: var(--background-color2) ;
+  transition: .5s ease-in-out background, .3s ease-in-out color;
+}
+
+.dark2{
+  background: var(--background-color);
+}
+
+#darkmodeTogle:checked + main{
+  --color-text: #fff;
+  --background-color: #0d1117;
+  --background-color2: #222222;
+
+  transition: .5s ease-in-out background, .3s ease-in-out color;
+}
+
+#darkmodeTogle:checked + main .darkmodeLabel:after{
+  content: ' ON';
+}
+
+#darkmodeTogle{
+  display: none;
+}
+
+p{
+  color: var(--color-text);
+}
+
+input, label{
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--color-text);
+}
+
+small{
+  color: var(--color-text);
+}
+
+.darkmodeLabel{
+  cursor: pointer;
+}
+
+.darkmodeLabel:after{
+  content: ' off';
+}
