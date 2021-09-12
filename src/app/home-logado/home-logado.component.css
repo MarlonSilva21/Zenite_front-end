@@ -5,12 +5,18 @@
 
 .dark2{
   background: var(--background-color);
+
+}
+
+.shadow-lg{
+  box-shadow: var(--shadow-color) !important;
 }
 
 #darkmodeTogle:checked + main{
   --color-text: #fff;
   --background-color: #0d1117;
   --background-color2: #222222;
+  --shadow-color: 0 0rem 1rem rgba(255,255,255,1.175)!important ;
 
   transition: .5s ease-in-out background, .3s ease-in-out color;
 }
@@ -23,19 +29,7 @@
   display: none;
 }
 
-p{
-  color: var(--color-text);
-}
-
-input, label{
-  color: var(--color-text);
-}
-
-h1, h2, h3, h4, h5{
-  color: var(--color-text);
-}
-
-small{
+h1, h2, h3, h4, h5, i, small, input, label, p, a{
   color: var(--color-text);
 }
 
@@ -45,4 +39,8 @@ small{
 
 .darkmodeLabel:after{
   content: ' off';
+}
+
+.like{
+  font-size: 20pt;
 }

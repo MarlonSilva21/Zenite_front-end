@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {environment} from "../../environments/environment.prod";
 import {AuthService} from "../service/auth.service";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Postagem} from "../model/Postagem";
 import {UsuarioEstudante} from "../model/UsuarioEstudante";
 import {PostagemService} from "../service/postagem.service";
@@ -14,6 +14,7 @@ import {PostagemService} from "../service/postagem.service";
 export class UsuarioComponent implements OnInit {
 
   foto = environment.foto
+  idUsuario: number
 
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
@@ -29,7 +30,8 @@ export class UsuarioComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private postagemService: PostagemService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -39,19 +41,15 @@ export class UsuarioComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
-    this.findByIdUser()
+    this.idUsuario = this.route.snapshot.params['id']
+    this.findByIdUser(this.idUsuario)
+
     this.postagemService.refreshToken()
 
   }
 
-  // getPostagemById() {
-  //   this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
-  //     this.listaPostagem = resp
-  //   })
-  // }
-
-  findByIdUser() {
-    this.authService.getByIdUser(this.idUser).subscribe((resp: UsuarioEstudante) => {
+  findByIdUser(id: number) {
+    this.postagemService.getByIdUser(id).subscribe((resp: UsuarioEstudante) => {
       this.usuario = resp
     })
   }

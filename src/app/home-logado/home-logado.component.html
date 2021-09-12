@@ -14,7 +14,7 @@
             <p class="card-text">0</p>
             <p class="card-text">Zenicoins</p>
             <p class="card-text">0</p>
-            <a class="btn btn-success w-100" routerLink="/perfil-usuario">Editar Perfil</a>
+            <a class="btn btn-success w-100" [routerLink]="['/perfil-usuario', idUsuario]">Editar Perfil</a>
             <label for="darkmodeTogle" class="darkmodeLabel btn btn-outline-light mt-1">Dark Mode</label>
           </div>
         </div>
@@ -39,7 +39,7 @@
                          alt="...">
                   </div>
                   <div class="col-10">
-                    <p class="m-0">{{item.usuario.nome}}</p>
+                    <p class="m-0 "><a  [routerLink]="['/perfil-usuario', item.usuario.id]">{{item.usuario.nome}}</a></p>
                     <small class="text-muted">
                       postado em: {{item.data | date : 'dd/MM/yyy'}} às {{item.data | date : 'HH'}} hrs
                     </small>
@@ -52,8 +52,8 @@
                 <hr>
                 <div class="d-flex justify-content-around align-items-center">
                   <div>
-                    <a href="">
-                      <img class="img" height="30" src="../../assets/img/gostar.png" alt="Like">
+                    <a href="" >
+                      <i class="dark2 like far fa-thumbs-up"></i>
                     </a>
                   </div>
                   <div>

@@ -32,7 +32,9 @@ const routes: Routes = [
   {path: 'homeLogado', component: HomeLogadoComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'navbarlogado', component : NavbarlogadoComponent},
-  {path: 'perfil-usuario', component: UsuarioComponent},
+
+  {path: 'perfil-usuario/:id', component: UsuarioComponent},
+
   {path: 'telaDeVideos', component: TelaVideosComponent},
 
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
