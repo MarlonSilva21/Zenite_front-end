@@ -520,19 +520,19 @@
             <form>
                 <div class="form-group">
                     <label for="email"></label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailContato"
+                    <input [(ngModel)]="email" name="emailForm" type="email" class="form-control" id="email" aria-describedby="emailContato"
                         placeholder="Seu endereço de e-mail">
                 </div>
                 <div class="form-group">
                     <label for="assunto"></label>
-                    <input type="text" class="form-control" id="assunto" placeholder="Assunto">
+                    <input  type="text" class="form-control" id="assunto" placeholder="Assunto">
                 </div>
                 <div class="form-group">
                     <label for="mensagem"></label>
-                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+                    <textarea  class="form-control" id="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-light">Enviar</button>
+                <button type="submit" class="btn btn-light" (click)="enviarEmail()">Enviar</button>
 
                 <div></div>
                 <div></div>

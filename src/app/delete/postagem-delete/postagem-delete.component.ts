@@ -12,6 +12,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class PostagemDeleteComponent implements OnInit {
 
+  idUsuario = environment.id
   postagem: Postagem = new Postagem()
   idPost: number
 
@@ -44,7 +45,7 @@ export class PostagemDeleteComponent implements OnInit {
   apagar() {
     this.postagemService.deletePostagem(this.idPost).subscribe(() =>{
       alert('Postagem apagada com sucesso')
-      this.router.navigate(['homeLogado'])
+      this.router.navigate(['/perfil-usuario/', this.idUsuario])
     })
   }
 
