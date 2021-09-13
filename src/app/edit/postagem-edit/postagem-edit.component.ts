@@ -18,6 +18,8 @@ export class PostagemEditComponent implements OnInit {
   listaTemas: Categoria[]
   idTema: number
 
+  idUsuario = environment.id
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -64,7 +66,7 @@ export class PostagemEditComponent implements OnInit {
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem atualizada com sucesso!')
-      this.router.navigate(['/perfil-usuario'])
+      this.router.navigate(['/perfil-usuario/', this.idUsuario])
     })
   }
 

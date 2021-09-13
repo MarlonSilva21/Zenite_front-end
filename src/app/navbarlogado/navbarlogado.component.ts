@@ -28,4 +28,10 @@ export class NavbarlogadoComponent implements OnInit {
     environment.foto = ''
     environment.id = 0
   }
+
+
+
+  desativado(){
+    alert('Este recurso não está disponível no momento ! ')
+  }
 }
