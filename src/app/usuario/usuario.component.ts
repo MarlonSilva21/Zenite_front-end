@@ -54,4 +54,15 @@ export class UsuarioComponent implements OnInit {
     })
   }
 
+  postagemEdit() {
+    let ok: boolean  = true
+
+    if(this.idUsuario != this.idUser){
+      ok = false
+    }
+
+    return ok
+
+  }
+
 }

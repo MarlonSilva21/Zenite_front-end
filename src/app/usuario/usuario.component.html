@@ -27,7 +27,7 @@
             </small>
           </div>
 
-          <div class="col-md-2 f-22pt">
+          <div *ngIf="postagemEdit()" class="col-md-2 f-22pt">
             <a [routerLink]="['/postagem-edit', item.id]" class="text-info" href=""><i class="far fa-edit mr-3"></i></a>
             <a [routerLink]="['/postagem-delete', item.id]" class="text-danger " href=""><i class="far fa-trash-alt"></i></a>
           </div>
