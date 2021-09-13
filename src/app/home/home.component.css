@@ -66,15 +66,15 @@ p{
 
 /*Estilo Máquina de Escrever*/
 .typing-animation{
-  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 1s normal both;
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 1s  normal both;
 }
 
 .typing-animation2{
-  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 3s normal both;
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 3s  normal both;
 }
 
 .typing-animation3{
-  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 5s normal both;
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 5s  normal both;
 }
 
 @keyframes typing {
@@ -96,7 +96,7 @@ p{
 
 }
 /*Estilo Máquina de Escrever*/
-  
+
 /*FLIP CARD*/
   .face {
     width: 350px;
@@ -109,7 +109,7 @@ p{
     height: 250px;
     perspective: 200px;
   }
-  
+
   .front, .back {
     position: absolute;
     width: 100%;
@@ -127,7 +127,7 @@ p{
     border-radius: 10px;
     transition: 700ms;
   }
-  
+
   .front {
     background: #4caf50;
     z-index: 1;
@@ -137,7 +137,7 @@ p{
     background: #ffffff;
     z-index: 1;
   }
-  
+
   .back {
     background: #92E3A9;
     transform: rotateY(-180deg);
@@ -149,12 +149,12 @@ p{
     transform: rotateY(-180deg);
     backface-visibility: hidden;
   }
-  
+
   .face:hover .front {
     transform: rotateY(180deg);
     z-index: 0;
   }
-  
+
   .face:hover .back {
     transform: rotateY(0);
     z-index: 1;
@@ -164,7 +164,7 @@ p{
     transform: rotateY(180deg);
     z-index: 0;
   }
-  
+
   .face:hover .backLhama {
     transform: rotateY(0);
     z-index: 1;
@@ -174,7 +174,7 @@ p{
     transform: rotateY(180deg);
     z-index: 0;
   }
-  
+
   .faceEquipe:hover .back {
     transform: rotateY(0);
     z-index: 1;
@@ -196,10 +196,63 @@ p{
 
 /*MODO NOTURNO*/
 
-
-.dark-mode:root{
-  --body-bg:
-  --body-color:
-  --link-color:
-  --link-color-hover:
+.img-wave{
+  transform: scaleY(-1);
+  background: #4caf50;
 }
+
+.wave{
+  background: #4caf50;
+}
+
+
+button.btn-laranja:hover{
+  background: darkorange;
+  transition: .5s ease-in-out;
+}
+
+.custom-shape-divider-bottom-1631492991 {
+  /*position: absolute;*/
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1631492991 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 133px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1631492991 .shape-fill {
+  fill: #4CAF50;
+}
+
+/**/
+
+
+.custom-shape-divider-top-1631492921 {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1631492921 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 133px;
+}
+
+.custom-shape-divider-top-1631492921 .shape-fill {
+  fill: #4CAF50;
+}
+
