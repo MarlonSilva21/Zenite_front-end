@@ -49,3 +49,12 @@
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+
+.corLink{
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}

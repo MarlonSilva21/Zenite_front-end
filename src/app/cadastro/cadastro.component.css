@@ -70,3 +70,7 @@ textarea:focus, input:focus, select:focus {
 
 }
 
+a:hover{
+    text-decoration: none;
+  }
+

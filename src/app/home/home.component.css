@@ -256,3 +256,12 @@ button.btn-laranja:hover{
   fill: #4CAF50;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
+.card{
+  width: 350px;
+  height: 410px;
+}
+
