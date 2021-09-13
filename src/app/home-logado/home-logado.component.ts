@@ -18,7 +18,7 @@ export class HomeLogadoComponent implements OnInit {
 
   nome = environment.nome
   foto = environment.foto
-  id = environment.id
+  idUsuario = environment.id
 
   usuario: UsuarioEstudante = new UsuarioEstudante()
 
@@ -44,6 +44,8 @@ export class HomeLogadoComponent implements OnInit {
 
   ngOnInit(){
 
+    scroll(0,0)
+
     if(environment.token == '') {
       this.router.navigate(['/home'])
     }
@@ -52,6 +54,7 @@ export class HomeLogadoComponent implements OnInit {
     this.getAllPostagens()
     this.temaService.refreshToken()
     this.postagemService.refreshToken()
+    this.auth.refreshToken()
   }
 
 
@@ -97,7 +100,7 @@ export class HomeLogadoComponent implements OnInit {
   }
 
   findByIdUser() {
-    this.auth.getByIdUser(this.id).subscribe((resp: UsuarioEstudante) => {
+    this.postagemService.getByIdUser(this.idUsuario).subscribe((resp: UsuarioEstudante) => {
       this.usuario = resp
     })
   }
@@ -107,7 +110,7 @@ export class HomeLogadoComponent implements OnInit {
     this.categoria.id = this.idCategoria
     this.postagem.categoria = this.categoria
 
-    this.usuario.id = this.id
+    this.usuario.id = this.idUsuario
     this.postagem.usuario = this.usuario
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {

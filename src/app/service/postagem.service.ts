@@ -3,6 +3,7 @@ import {Postagem} from "../model/Postagem";
 import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { environment } from 'src/environments/environment.prod';
+import {UsuarioEstudante} from "../model/UsuarioEstudante";
 
 @Injectable({
   providedIn: 'root'
@@ -45,5 +46,9 @@ export class PostagemService {
 
   deletePostagem(id: number) {
     return this.http.delete(`https://redezenite.herokuapp.com/postagem/${id}`, this.token)
+  }
+
+  getByIdUser(id: number): Observable<UsuarioEstudante> {
+    return this.http.get<UsuarioEstudante>(`https://redezenite.herokuapp.com/usuario/${id}`, this.token)
   }
 }

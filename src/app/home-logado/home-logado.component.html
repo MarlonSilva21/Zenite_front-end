@@ -1,134 +1,140 @@
-<div style="height: 90px;"></div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="card text-center shadow-lg mb-3 rounded">
-        <img src="{{foto}}" class="img-fluid rounded-circle m-3" alt="foto do user">
-        <div class="card-body">
-          <h5 class="card-title">{{nome}}</h5>
-          <p class="card-text">Cursos concluídos</p>
-          <p class="card-text">0</p>
-          <p class="card-text">Zenicoins</p>
-          <p class="card-text">0</p>
-          <a href="#" class="btn btn-success">Lorem ipsum</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-7">
-      <div class="row">
-        <div class="col-md-12 shadow-lg mb-3 p-3 rounded">
-          <div class="form-group">
-            <input type="text" class="form-control" id="titulo1"
-                   placeholder="Digite um título de postagem para pesquisar" [(ngModel)]="postagemTema"
-                   (keyup)="findByTituloPostagem()">
+
+<input type="checkbox" id="darkmodeTogle">
+<main class="postagem">
+  <div style="height: 90px;"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 ">
+        <div class="card text-center shadow-lg mb-3 rounded dark2">
+          <img src="{{foto}}" class="img-fluid rounded-circle m-3" alt="foto do user">
+          <div class="card-body">
+            <h5 class="card-title">{{nome}}</h5>
+            <p class="card-text">Cursos concluídos</p>
+            <p class="card-text">0</p>
+            <p class="card-text">Zenicoins</p>
+            <p class="card-text">0</p>
+            <a class="btn btn-success w-100" [routerLink]="['/perfil-usuario', idUsuario]">Editar Perfil</a>
+            <label for="darkmodeTogle" class="darkmodeLabel btn btn-outline-light mt-1">Dark Mode</label>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 shadow-lg mb-3 p-3 rounded" *ngFor='let item of listaPostagem | orderBy : key : reverse'>
-          <div class="row d-flex align-items-center">
-            <div class="col-12">
-              <div class="row d-flex align-items-center">
-                <div class="col-2">
-                  <img src="{{item.usuario.foto}}" class="img-fluid rounded-circle m-3"
-                       alt="...">
+      <div class="col-md-7">
+        <div class="row">
+          <div class="col-md-12 dark2 shadow-lg mb-3 p-3 rounded">
+            <div class="form-group ">
+              <input type="text" class="form-control dark2" id="titulo1"
+                     placeholder="Digite um título de uma postagem para pesquisar" [(ngModel)]="postagemTema"
+                     (keyup)="findByTituloPostagem()">
+            </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-md-12 shadow-lg mb-3 p-3 rounded dark2" *ngFor='let item of listaPostagem | orderBy : key : reverse'>
+            <div class="row d-flex align-items-center">
+              <div class="col-12">
+                <div class="row d-flex align-items-center">
+                  <div class="col-2">
+                    <img src="{{item.usuario.foto}}" class="img-fluid rounded-circle m-3"
+                         alt="...">
+                  </div>
+                  <div class="col-10">
+                    <p class="m-0 "><a  [routerLink]="['/perfil-usuario', item.usuario.id]">{{item.usuario.nome}}</a></p>
+                    <small class="text-muted">
+                      postado em: {{item.data | date : 'dd/MM/yyy'}} às {{item.data | date : 'HH'}} hrs
+                    </small>
+                  </div>
                 </div>
-                <div class="col-10">
-                  <p class="m-0">{{item.usuario.nome}}</p>
-                  <small>
-                    postado em: {{item.data | date : 'dd/MM/yyy'}} às {{item.data | date : 'HH'}} hrs
-                  </small>
-                </div>
-              </div>
-              <h3 class="text-center mb-3">{{item.titulo}}</h3>
-              <p>{{item.texto}}
-              </p>
-              <img class="img-fluid" src="{{item.foto}}" alt="foto da postagem">
-              <hr>
-              <div class="d-flex justify-content-around align-items-center">
-                <div>
-                  <a href="">
-                    <img class="img" height="30" src="../../assets/img/gostar.png" alt="Like">
-                  </a>
-                </div>
-                <div>
-                  <a class="btn btn-success">Comentar</a>
+                <h3 class="text-center mb-3">{{item.titulo}}</h3>
+                <p>{{item.texto}}
+                </p>
+                <img class="img-fluid" src="{{item.foto}}" alt="foto da postagem">
+                <hr>
+                <div class="d-flex justify-content-around align-items-center">
+                  <div>
+                    <a href="" >
+                      <i class="dark2 like far fa-thumbs-up"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a class="btn btn-success">Comentar</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="col-md-2">
+        <div class="row">
+          <div class="col-md-12 p-3">
+            <button class="btn btn-success btn-block " data-toggle="modal" data-target="#novaPostagem">Nova
+              Postagem
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-2">
-      <div class="row">
-        <div class="col-md-12 p-3">
-          <button class="btn btn-success btn-block " data-toggle="modal" data-target="#novaPostagem">Nova
-            Postagem
-          </button>
+
+    <!--  <div class="modal" tabindex="-1">-->
+    <!--    <div class="modal-dialog">-->
+    <!--      <div class="modal-content">-->
+    <!--        <div class="modal-header">-->
+    <!--          <h5 class="modal-title">Modal title</h5>-->
+    <!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+    <!--            <span aria-hidden="true">&times;</span>-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--        <div class="modal-body">-->
+    <!--          <p>Modal body text goes here.</p>-->
+    <!--        </div>-->
+    <!--        <div class="modal-footer">-->
+    <!--          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+    <!--          <button type="button" class="btn btn-primary">Save changes</button>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="titulo">Título</label>
+              <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+            </div>
+            <div class="form-group">
+              <label for="texto">Texto</label>
+              <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="imagem">imagem</label>
+              <input [(ngModel)]="postagem.foto" type="text" class="form-control" id="imagem" placeholder="Insira o link da imagem">
+            </div>
+            <div class="form-group">
+              <label for="tema">Escolha um tema </label>
+              <select class="form-control" name="tema" id="tema" [(ngModel)]='idCategoria' (change)="findByIdCategoria()">
+                <option *ngFor="let item of listaCategoria" value="{{item.id}}">
+                  {{item.categoria}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-<!--  <div class="modal" tabindex="-1">-->
-<!--    <div class="modal-dialog">-->
-<!--      <div class="modal-content">-->
-<!--        <div class="modal-header">-->
-<!--          <h5 class="modal-title">Modal title</h5>-->
-<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--            <span aria-hidden="true">&times;</span>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="modal-body">-->
-<!--          <p>Modal body text goes here.</p>-->
-<!--        </div>-->
-<!--        <div class="modal-footer">-->
-<!--          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-<!--          <button type="button" class="btn btn-primary">Save changes</button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-  <!-- Modal -->
-  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-       aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
-          </div>
-          <div class="form-group">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="imagem">imagem</label>
-            <input [(ngModel)]="postagem.foto" type="text" class="form-control" id="imagem" placeholder="Insira o link da imagem">
-          </div>
-          <div class="form-group">
-            <label for="tema">Escolha um tema </label>
-            <select class="form-control" name="tema" id="tema" [(ngModel)]='idCategoria' (change)="findByIdCategoria()">
-              <option *ngFor="let item of listaCategoria" value="{{item.id}}">
-                {{item.categoria}}
-              </option>
-            </select>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</main>

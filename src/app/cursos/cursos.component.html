@@ -4,15 +4,11 @@
   <div class="row d-flex justify-content-center">
     <div class="col-md-10 shadow-lg mb-3 p-3 rounded bg-success position-fixed w-100" style="z-index: 100;">
       <div class="form-group pt-2">
-        <select class="form-control bg-success text-light" name="pesquisarTema" id="pesquisarTema" >
 
-          <option>Busque por uma categoria de cursos específica!</option>
-          <option *ngFor="let item of listaCategoria" value="{{item.id}}">
+        <input type="text" class="form-control" id="titulo1"
+               placeholder="Procure por um curso específico" [(ngModel)]="cursoTema"
+               (keyup)="findByNomeCurso()">
 
-            {{item.categoria}}
-          </option>
-
-        </select>
       </div>
     </div>
   </div>
@@ -175,9 +171,9 @@
   <div class="row">
     <div class="col-md-12">
 
-      <div class="row d-flex align-items-center" *ngFor="let item of listaCursos">
+      <div class="row d-flex align-items-center mb-5" *ngFor="let item of listaCursos">
         <div class="col-md-3">
-          <img class="img-fluid" src="{{item.foto}}" alt="">
+          <img class="img-fluid" style="min-height: 200px" src="{{item.foto}}" alt="Imagem de capa dos cursos">
         </div>
         <div class="col-md-9">
           <h2>{{item.titulo}}</h2>

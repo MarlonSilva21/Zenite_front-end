@@ -1,0 +1,46 @@
+.postagem{
+  background: var(--background-color2) ;
+  transition: .5s ease-in-out background, .3s ease-in-out color;
+}
+
+.dark2{
+  background: var(--background-color);
+
+}
+
+.shadow-lg{
+  box-shadow: var(--shadow-color) !important;
+}
+
+#darkmodeTogle:checked + main{
+  --color-text: #fff;
+  --background-color: #0d1117;
+  --background-color2: #222222;
+  --shadow-color: 0 0rem 1rem rgba(255,255,255,1.175)!important ;
+
+  transition: .5s ease-in-out background, .3s ease-in-out color;
+}
+
+#darkmodeTogle:checked + main .darkmodeLabel:after{
+  content: ' ON';
+}
+
+#darkmodeTogle{
+  display: none;
+}
+
+h1, h2, h3, h4, h5, i, small, input, label, p, a{
+  color: var(--color-text);
+}
+
+.darkmodeLabel{
+  cursor: pointer;
+}
+
+.darkmodeLabel:after{
+  content: ' off';
+}
+
+.like{
+  font-size: 20pt;
+}
