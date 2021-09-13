@@ -265,3 +265,33 @@ a:hover{
   height: 410px;
 }
 
+/***************************************************************************/
+
+.darkmode{
+  background: var(--background-color3);
+}
+
+#darkmodeTogle{
+  display: none;
+}
+
+#darkmodeTogle:checked + main{
+  --color-text: #fff;
+  --background-color: #0d1117;
+  --background-color3: #222222;
+  --shadow-color: 0 0rem 1rem rgba(255,255,255,1.175)!important ;
+
+  transition: .5s ease-in-out background, .3s ease-in-out color;
+}
+
+h1  {
+  color: var(--color-text);
+}
+
+.p-estilizado{
+  color: var(--color-text);
+}
+
+.f-sz{
+  font-size: 20pt;
+}

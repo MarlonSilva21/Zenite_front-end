@@ -8,6 +8,7 @@ html{
   --color-text: #000;
   --background-color: #fff;
   --background-color2: #f2f2f2;
+  --background-color3: #fff;
   --shadow-color: 0 1rem 3rem rgba(0,0,0,.175)!important;
   --shadow-color2: 0 0rem 1rem rgba(255,255,255,1.175)!important ;
 }
