@@ -14,6 +14,11 @@ export class NavbarlogadoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if(environment.token == '') {
+      this.router.navigate(['/home'])
+    }
+    
   }
 
   sair(){
