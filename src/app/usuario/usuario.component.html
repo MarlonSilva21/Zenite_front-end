@@ -1,5 +1,5 @@
 <div style="height: 50vh; margin-bottom: 100px;" class="container-fluid bg-success d-flex align-items-end justify-content-end">
-  <button [routerLink]="['/usuario-edit', idUser]" style="color: white;" class="btn btn-warning btn-lg m-3">Editar Usuário</button>
+  <button [routerLink]="['/usuario-edit', idUser]" style="color: white;" class="btn btn-warning btn-lg m-3" *ngIf='postagemEdit()'>Editar Usuário</button>
   <img style="position: absolute; right: 0; left: 0; bottom: 0; top: 0; margin: auto;" width="200"
        src="{{usuario.foto}}" class="img-fluid rounded-circle"
        alt="Imagem do usuario logado">
