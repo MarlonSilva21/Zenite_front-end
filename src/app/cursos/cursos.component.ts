@@ -24,7 +24,8 @@ export class CursosComponent implements OnInit {
   constructor(
     private cursoService: CursoService,
     private temaService: TemaService,
-    private router: Router
+    private router: Router,
+    
   ) { }
 
   ngOnInit(){
