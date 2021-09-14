@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ export class HomeComponent implements OnInit {
   // assunto: string
   // msg: string
 
-  constructor() { }
+  constructor(private alertas: AlertasService
+    ) { }
 
   ngOnInit() {
     window.scroll(0,0)
@@ -21,16 +23,16 @@ export class HomeComponent implements OnInit {
 
 
     if(this.email.indexOf('.') === -1){
-      alert('Informe um email válido')
+      this.alertas.showAlertInfo('Informe um email válido')
 
     }
 
     else if(this.email.indexOf('@') === -1){
-      alert('Informe um email válido')
+      this.alertas.showAlertInfo('Informe um email válido')
     }
 
     else{
-      alert('Email enviado com sucesso')
+      this.alertas.showAlertSuccess('Email enviado com sucesso')
     }
 
 

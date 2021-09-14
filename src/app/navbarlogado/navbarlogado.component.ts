@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {environment} from "../../environments/environment.prod";
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-navbarlogado',
@@ -10,7 +11,8 @@ import {environment} from "../../environments/environment.prod";
 export class NavbarlogadoComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -32,6 +34,6 @@ export class NavbarlogadoComponent implements OnInit {
 
 
   desativado(){
-    alert('Este recurso não está disponível no momento ! ')
+    this.alertas.showAlertInfo('Este recurso não está disponível no momento ! ')
   }
 }

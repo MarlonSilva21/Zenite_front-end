@@ -3,6 +3,7 @@ import {environment} from "../../../environments/environment.prod";
 import {UsuarioEstudante} from "../../model/UsuarioEstudante";
 import {AuthService} from "../../service/auth.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-usuario-edit',
@@ -15,11 +16,13 @@ export class UsuarioEditComponent implements OnInit {
   idUser: number
   confirmarSenha: string
   tipoUsuario: string
+  idUsuario = environment.id
 
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -45,7 +48,7 @@ export class UsuarioEditComponent implements OnInit {
   atualizar(){
 
     if(this.user.senha != this.confirmarSenha){
-     alert('As senhas estão incorretas')
+     this.alertas.showAlertDanger('As senhas estão incorretas')
     }
     else{
       this.authService.cadastrar(this.user).subscribe((resp: UsuarioEstudante) => {
@@ -58,7 +61,7 @@ export class UsuarioEditComponent implements OnInit {
         environment.token = ''
         environment.id  = 0
 
-        this.router.navigate(['/login'])
+        this.router.navigate(['/homeLogado'])
       })
     }
   }

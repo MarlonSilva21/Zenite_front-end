@@ -3,6 +3,7 @@ import {UsuarioEstudanteLogin} from "../model/UsuarioEstudanteLogin";
 import {AuthService} from "../service/auth.service";
 import {Route, Router} from "@angular/router";
 import {environment} from "../../environments/environment.prod";
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -34,7 +36,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/homeLogado'])
     }, erro => {
       if (erro.status == 500){
-        alert('Email ou senha estão errados!')
+        this.alertas.showAlertDanger('Email ou senha estão errados!')
       }
       })
   }

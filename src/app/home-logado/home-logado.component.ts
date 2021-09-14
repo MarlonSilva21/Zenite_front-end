@@ -8,6 +8,7 @@ import {Postagem} from "../model/Postagem";
 import {UsuarioEstudante} from "../model/UsuarioEstudante";
 import {PostagemService} from "../service/postagem.service";
 import {AuthService} from "../service/auth.service";
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-home-logado',
@@ -39,7 +40,9 @@ export class HomeLogadoComponent implements OnInit {
     private auth:AuthService,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService,
+    
   ) { }
 
   ngOnInit(){
@@ -115,7 +118,7 @@ export class HomeLogadoComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
