@@ -7,6 +7,7 @@
 
 .ml-100{
     margin-left: 100px;
+  margin-top: 60px;
 }
 
 .w-65{
@@ -20,6 +21,10 @@
 .b-input-bottom{
     border: none;
 
+}
+
+.none-prof-1{
+  display: none;
 }
 
 textarea:focus, input:focus, select:focus {
@@ -41,12 +46,20 @@ textarea:focus, input:focus, select:focus {
     color: #4caf50;
 }
 
+.color-secondary{
+  color: #fe9100;
+}
+
 .color-grey{
     color: #9e9e9e;
 }
 
 .bg-primary-root{
     background-color: #4caf50;
+}
+
+.bg-secondary-root{
+  background-color: #fe9100;
 }
 
 .square-center{
@@ -74,3 +87,86 @@ a:hover{
     text-decoration: none;
   }
 
+@media (max-width: 420px) {
+  .square-center{
+    position: relative;
+  }
+
+  .ml-100{
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1110px) {
+
+  .ml-100{
+    margin-left: 90px;
+  }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 500px) {
+
+  .ml-100{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 60px !important;
+  }
+
+  .none-prof-1{
+    flex-wrap: wrap !important;
+  }
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+  .none-prof{
+    display: none;
+  }
+
+  .ml-100{
+    margin-left: 80px ;
+    margin-right: 80px ;
+    margin-top: 60px;
+  }
+
+  .none-prof-1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .color-white{
+    color: #a19696;
+    line-height: 15pt;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+
+  .ml-100{
+    margin-left: 60px;
+    margin-top: 60px;
+  }
+
+  .mg-tp{
+    margin-top: 0 !important;
+  }
+
+  .mg-tp-ml{
+    margin-top: 0 !important;
+    margin-left: 25px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+
+}
