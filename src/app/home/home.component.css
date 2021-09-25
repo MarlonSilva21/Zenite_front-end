@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+img{
+  max-width: 100%;
+}
+
+.storyset img{
+  width: 100%;
+  height: auto;
+}
+
 .icon{
   color: #F79B1F;
   font-size: 15pt;
@@ -56,8 +65,8 @@ font-family: 'Ubuntu', sans-serif;
 .fs-50{
     font-size: 42pt;
     font-family: 'Ubuntu', sans-serif;
-    border-right: 2px solid;
-    white-space: nowrap;
+    /*border-right: 2px solid;*/
+    /*white-space: nowrap;*/
     overflow: hidden;
 }
 
@@ -65,38 +74,7 @@ p{
   font-family: 'Ubuntu', sans-serif;
 }
 
-/*Estilo Máquina de Escrever*/
-.typing-animation{
-  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 1s  normal both;
-}
 
-.typing-animation2{
-  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 3s  normal both;
-}
-
-.typing-animation3{
-  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 5s  normal both;
-}
-
-@keyframes typing {
-  from{
-    width: 0;
-  }
-  to{
-    width: 9em;
-  }
-}
-
-@keyframes blinkCursor {
-  from{
-    border-right-color: transparent;
-  }
-  to{
-    border-right-color: transparent;
-  }
-
-}
-/*Estilo Máquina de Escrever*/
 
 /*FLIP CARD*/
   .face {
@@ -301,3 +279,36 @@ h1  {
   padding: 10px;
 
 }
+
+/*Estilo Máquina de Escrever
+.typing-animation{
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 1s  normal both;
+}
+
+.typing-animation2{
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 3s  normal both;
+}
+
+.typing-animation3{
+  animation: blinkCursor 500ms steps(40) infinite normal, typing 2s steps(40) 5s  normal both;
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to{
+    width: 9em;
+  }
+}
+
+@keyframes blinkCursor {
+  from{
+    border-right-color: transparent;
+  }
+  to{
+    border-right-color: transparent;
+  }
+
+}
+Estilo Máquina de Escrever*/
