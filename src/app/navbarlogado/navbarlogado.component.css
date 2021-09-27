@@ -29,12 +29,16 @@ ul li a span.ficon{
 }
 
 .espR{
-    
+
     margin-right: 20pt;
 }
 
 .espL{
-    
+
     margin-right: 20pt;
 }
 
+li a span:hover{
+  font-weight: bold;
+  color: whitesmoke;
+}

@@ -44,3 +44,8 @@ h1, h2, h3, h4, h5, i, small, input, label, p, a{
 .like{
   font-size: 20pt;
 }
+
+.img-d-block{
+  display: block;
+  margin: 0 auto;
+}

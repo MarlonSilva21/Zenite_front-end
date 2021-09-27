@@ -20,3 +20,9 @@ ul li a.color{
 .item{
     margin-right: 15px;
 }
+
+li a:hover{
+  display: block;
+  background-color: #F79B1F;
+
+}
