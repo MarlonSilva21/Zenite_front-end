@@ -1,27 +1,71 @@
-# Zenite
+Bem vinde a Rede Zênite.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
+**Quem Somos:**
 
-## Development server
+Acreditamos que a educação é a melhor ferramenta para lutar por seus direitos e alcançar novos objetivos, por isso, nosso projeto nasceu da ideia de auxiliar jovens de 14 até 24 anos, em situação de vulnerabilidade social, a ingressar no mercado de trabalho. No mercado trocamos a nossa força de trabalho por produtos essenciais para vida, na Zênite pretendemos trocar a força de estudo por esses produtos, para assim, menos pessoas precisarem desistir dos estudos para se manter.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Somos uma rede social idealizada com o intuito de incentivar o acesso e transmissão à educação, conectando educadores voluntários a alunes que buscam uma formação inicial;
 
-## Code scaffolding
+A Zênite também integra o alune a uma rede de empresas que pode patrocinar e incentivar o usuário até que ele esteja formado, além da oportunidade de contratação ao final da formação.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Missão:**
+Contribuir na erradicação da pobreza através do incentivo ao acesso à educação e inicialização de jovens no mercado de trabalho.
 
-## Build
+**Visão:**
+Crescer de forma sustentável, agregando conhecimento e bem estar aos envolvidos no projeto.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Valores:**
+Agir de forma correta, priorizando a qualidade de vida, valorizar quem todes que contribuem para a realização desse projeto.
 
-## Running unit tests
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Links**
 
-## Running end-to-end tests
+Rede Zênite: https://redezenite.netlify.app/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Apresentação: https://bityli.com/tTn6XR
 
-## Further help
+Back-End: https://github.com/andrem91/Zenite
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<br>
+
+**Equipe:**
+
+*André Marques*
+
+github: https://github.com/andrem91
+
+linkedIn: https://www.linkedin.com/in/andrem91/
+
+
+
+*Barbara Cirilo*
+
+github: https://github.com/Barbarac17
+
+linkedIn: https://www.linkedin.com/in/barbara-cirilo/
+
+
+
+*Jaqueline Cantarino*
+
+github: https://github.com/jaquecantarino
+
+linkedIn: https://www.linkedin.com/in/jaquelinecassimiro/
+
+
+
+*Marlon Silva*
+
+github: https://github.com/MarlonSilva21
+
+linkedIn: https://www.linkedin.com/in/marlon-silva-43075a184/
+
+
+
+*Tomas Alric*
+
+github: https://github.com/TomasAlric
+
+linkedIn: https://www.linkedin.com/in/tomas-alric/
+
